@@ -1,0 +1,31 @@
+{
+  "name": "myapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prod": "NODE_ENV=production node server.js",
+    "lint": "next lint",
+    "export": "next export",
+    "static-run": "next export && serve out",
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+  },
+  "dependencies": {
+    "@studio-freight/hamo": "^0.4.43",
+    "@studio-freight/lenis": "^0.2.11",
+    "@studio-freight/tempus": "^0.0.30",
+    "classnames": "^2.3.2",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-countup": "^6.3.1",
+    "react-dom": "18.2.0",
+    "swiper": "^8.4.4"
+  },
+  "devDependencies": {
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1",
+    "next-with-less": "^2.0.5"
+  }
+}

@@ -1,0 +1,303 @@
+.main {
+  overflow: hidden;
+  color: #f8f8f8;
+  background-color: rgb(7 15 30);
+}
+
+::selection {
+  color: #fff;
+  background: #141d29;
+  text-shadow: none;
+}
+
+.main .menu{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.main .menu-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.main  .menu .rest-text{
+  margin-left: 100px;
+  width: 200px;
+  line-height: 60px;
+  font-size: 20px;
+  text-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.main .menu-list .menu-item{
+  margin-right: 20px;
+  color: #ddd;
+  transition: color .2s ease;
+  font-size: 14px;
+}
+
+.main .menu-list .menu-item:hover{
+  color: #fff;
+}
+
+.main .menu-list .menu-item:last-child{
+  margin-right: 0;
+}
+
+.banner .swiper{
+  height: 70vh;
+}
+
+.banner .swiper .swiper-slide{
+  position: relative;
+}
+
+.banner .swiper .swiper-slide::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg,rgb(7 14 29 / 15%) 0%,rgb(7 14 29 / 20%) 50%),linear-gradient(to top,rgb(7 15 30) 10%,rgb(7 15 30 / 20%) 50%);
+}
+
+.banner .swiper .swiper-slide .slide-video{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner .video-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.banner .img-container h2.title, .banner .video-container h2.title{
+  font-size: 110px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.banner .img-container .subtitle, .banner .video-container .subtitle{
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.banner .img-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.banner .together{
+  background: #fff url('/images/https___www.lifeofpix.com_wp-content_uploads_2019_01_mememememe-2.jpg') no-repeat center/cover;
+}
+
+.banner .up{
+  background: #fff url('/images/https___www.lifeofpix.com_wp-content_uploads_2022_10_DSC_0138.jpg') no-repeat center/cover;
+}
+
+.banner .only{
+  background: #fff url('/images/Slider1-Turbo-Engine-Solutions.jpg') no-repeat center/cover;
+}
+
+.about{
+  height: 400px;
+  padding-top: 60px;
+  background-color: rgb(7 15 30);
+}
+
+.about .container{
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+  height: 100%;
+}
+
+.about .container::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 180px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+}
+
+.about .container .city{
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #bcbfcf;
+}
+
+.about .container .date{
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.introduction, .blinds{
+  padding: 200px 0;
+  background: linear-gradient(180deg, rgb(7 15 30) 70%, rgb(36 64 116) 100%);
+}
+
+.introduction .container{
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.introduction .container .img{
+  position: relative;
+  height: 450px;
+  width: 800px;
+  border: 1px solid #474648;
+  box-shadow: 0 0 30px #474648;
+  user-select: none;
+}
+
+.introduction .container .info{
+  width: 600px;
+  margin-left: 40px;
+  line-height: 25px;
+}
+
+.introduction .container .info .title{
+  font-size: 22px;
+  color: #bcbfcf;
+}
+
+.introduction .container .info .desc{
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.blinds{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.blinds .title{
+  color: #bcbfcf;
+  font-size: 14px;
+  margin-bottom: 100px;
+}
+
+.blinds .blinds-list{
+  display: flex;
+}
+
+.blinds .blinds-item{
+  width: calc(100% / 7);
+  position: relative;
+  height: 600px;
+  cursor: pointer;
+  user-select: none;
+  transition: width .4s ease;
+}
+
+.blinds .blinds-item.hover{
+  width: 350px;
+}
+
+.blinds .blinds-item.active .info{
+  background-color: rgba(7, 15, 30, .5);;
+}
+
+.blinds .blinds-item.active{
+  width: 1600px;
+}
+
+.blinds .blinds-item.active .background span{
+  transform: scale(1.8);
+}
+
+.blinds .blinds-item .background{
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.blinds .blinds-item .background span{
+  transform: scale(1);
+  transition: all .5s ease;
+}
+
+.blinds .blinds-item .info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  line-height: 20px;
+  text-shadow: 0 0 20px rgba(0,0,0,.5);
+  background-color: rgba(7, 15, 30, .3);
+  transition: background-color .4s ease;
+}
+
+.blinds .blinds-item.active .info .count{
+  font-size: 50px;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.blinds .blinds-item.active .info .text, .blinds .blinds-item.active .info .en{
+  font-size: 20px;
+  line-height: normal;
+}
+
+.blinds .blinds-item .info .count{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.blinds .blinds-item .info .text{
+  margin-bottom: 5px;
+  color: #bcbfcf;
+}
+
+.blinds .blinds-item .info .en{
+  color: #bcbfcf;
+}
