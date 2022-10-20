@@ -55,7 +55,7 @@ export default function Home() {
   
   useEffect(() => {
     const request = async () => {
-      const baseUrl = process.env.NODE_ENV === 'production' ? 'http://localhost:3000' : 'http://localhost:3000'
+      const baseUrl = process.env.NODE_ENV === 'production' ? 'http://localhost:3000' : 'http://http://47.92.112.138/:3000'
       const res = await fetch(`${baseUrl}/api/lighlights`)
       const data = await res.json()
       setData(data)
