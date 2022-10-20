@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prod": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "export": "next export",
     "static-run": "next export && serve out",
