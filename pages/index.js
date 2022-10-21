@@ -173,7 +173,7 @@ export default function Home() {
             }
           </ul>
         </section>
-        <footer className='beian'>沪ICP备2020025359号</footer>
+        <footer className='beian'><a href="https://beian.miit.gov.cn" target='__bank'>沪ICP备2020025359号</a></footer>
       </main>
     </div>
   )
