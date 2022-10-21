@@ -173,6 +173,7 @@ export default function Home() {
             }
           </ul>
         </section>
+        <footer className='beian'>沪ICP备2020025359号</footer>
       </main>
     </div>
   )

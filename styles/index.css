@@ -301,3 +301,11 @@
 .blinds .blinds-item .info .en{
   color: #bcbfcf;
 }
+
+.beian{
+  line-height: 50px;
+  text-align: center;
+  color: #bcbfcf;
+  font-size: 14px;
+  background-color: #171717;
+}
