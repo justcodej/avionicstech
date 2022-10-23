@@ -174,9 +174,9 @@ export default function Home() {
         </section>
         <section className='introduction'>
           <div className="container">
-            <div className='img'><Image layout='fill' src="/images/yEODPDap2r.jpg" objectFit='cover' alt="" /></div>
+            <div className='img'></div>
             <div className="info">
-              <p className='title'>驾驶舱系统、软件开发、机载MRO、通用飞机航电系统、Evtol飞控技术</p>
+              <p className='title'>未来航电</p>
               <p className='desc'>在科技创新背景下，ATC2022将聚焦数字技术在航空电子领域的未来发展，本届大会主题：“创新变革、推动先进航电技术”。深入探讨航电、机电、飞控、软件等技术前沿，将围绕模块综合化航空电子系统、先进民航驾驶舱集成、通用飞机座舱系统、软件赋能驱动等内容展开交流。</p>
             </div>
           </div>
@@ -230,7 +230,7 @@ export default function Home() {
                 </ol>
               </SwiperSlide>
               <SwiperSlide className='schedule-item'>
-                <div className="date">12.15 am</div>
+                <div className="date">12.15 pm</div>
                 <div className="title">智能航空机载论坛</div>
                 <ol className='schedule-item-ol'>
                   <li className='schedule-item-li'>机载MRO</li>
@@ -256,7 +256,7 @@ export default function Home() {
                 </ol>
               </SwiperSlide>
               <SwiperSlide className='schedule-item'>
-                <div className="date">12.16 am</div>
+                <div className="date">12.16 pm</div>
                 <div className="title"> 通用飞机驾驶舱创新论坛</div>
                 <ol className='schedule-item-ol'>
                   <li className='schedule-item-li'>现代航空电子系统技术发展浅析</li>
@@ -270,6 +270,12 @@ export default function Home() {
               </SwiperSlide>
             </Swiper>
           </div>
+        </section>
+        <section>
+          <div className="titl">会议一览</div>
+        </section>
+        <section>
+          <div className="titl">会议内容</div>
         </section>
         <footer className='beian'><a href="https://beian.miit.gov.cn" target='__bank'>沪ICP备2020025359号</a></footer>
       </main>

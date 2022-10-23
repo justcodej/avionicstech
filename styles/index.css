@@ -133,9 +133,10 @@
 }
 
 .about{
-  height: 400px;
-  padding-top: 60px;
+  height: 30vh;
   background-color: rgb(7 15 30);
+  display: flex;
+  align-content: center;
 }
 
 .about .container{
@@ -145,19 +146,9 @@
   color: #fff;
   position: relative;
   height: 100%;
-}
-
-.about .container::after{
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1px;
-  height: 180px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .about .container .city{
@@ -169,11 +160,12 @@
 .about .container .date{
   font-size: 20px;
   letter-spacing: 4px;
+  margin-bottom: 150px;
 }
 
 .introduction, .blinds, .schedule{
-  padding: 200px 0;
-  background: linear-gradient(180deg, rgb(7 15 30) 70%, rgb(36 64 116) 100%);
+  padding: 140px 0 180px;
+  background: linear-gradient(180deg, rgb(7 15 30) 70%, rgb(22 35 60) 100%);
 }
 
 .introduction .container{
@@ -187,9 +179,8 @@
   position: relative;
   height: 450px;
   width: 800px;
-  border: 1px solid #474648;
-  box-shadow: 0 0 30px #474648;
   user-select: none;
+  background: url('/images/yEODPDap2r.jpg') no-repeat center / cover;
 }
 
 .introduction .container .info{
@@ -200,12 +191,13 @@
 
 .introduction .container .info .title{
   font-size: 22px;
-  color: #bcbfcf;
+  color: #fff;
 }
 
 .introduction .container .info .desc{
   font-size: 14px;
   margin-top: 30px;
+  color: #ccc;
 }
 
 .blinds{
@@ -220,7 +212,7 @@
 .blinds>.title, .schedule>.title{
   color: #bcbfcf;
   font-size: 14px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   text-transform: uppercase;
 }
 
@@ -298,11 +290,11 @@
 
 .blinds .blinds-item .info .text{
   margin-bottom: 5px;
-  color: #bcbfcf;
+  color: #ccc;
 }
 
 .blinds .blinds-item .info .en{
-  color: #bcbfcf;
+  color: #ccc;
 }
 
 .beian{
@@ -316,6 +308,7 @@
 .schedule{
   padding-left: 100px;
   padding-right: 100px;
+  position: relative;
 }
 
 .schedule .container{
@@ -324,14 +317,14 @@
 }
 
 .schedule .container .schedule-list{
-  padding-top: 180px;
+  padding-top: 60px;
 }
 
-.schedule .container .schedule-list::after{
+.schedule::after{
   content: "";
   display: block;
   position: absolute;
-  top: 8px;
+  top: 222px;
   left: 0;
   right: 0;
   height: 2px;
@@ -341,7 +334,7 @@
 .schedule .container .schedule-list .schedule-item{
   position: relative;
   padding: 40px 0 40px 80px;
-  background: linear-gradient(180deg, transparent 0%, rgb(7 15 30) 100%), url('/images/Slider1-Turbo-Engine-Solutions.jpg') no-repeat center / cover;
+  background: linear-gradient(180deg, transparent 0%, rgb(22 35 60) 100%);
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -350,7 +343,7 @@
   content: "";
   display: block;
   position: absolute;
-  top: -180px;
+  top: -60px;
   left: 0;
   right: 0;
   margin: auto;
@@ -376,7 +369,7 @@
 
 .schedule .container .schedule-list .schedule-item .date{
   position: absolute;
-  top: -140px;
+  top: -40px;
   left: 0;
   right: 0;
   margin: auto;
