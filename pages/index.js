@@ -183,32 +183,93 @@ export default function Home() {
         </section>
         <section className='blinds'>
           <div className="title">会议亮点 HIGHLIGHTS</div>
-          <ul className='blinds-list' onMouseLeave={onMouseLeave}>
-            {
-              data.map((item, i) => (
-                <li
-                  className={classNames('blinds-item', { 'hover': index === i }, { 'active': active === i })}
-                  key={item.text}
-                  onMouseEnter={(e) => onMouseEnter(e, i)}
-                  onClick={(e) => handleClickItem(e, i)}
-                >
-                  <div className='background'>
-                    <Image layout='fill' src={item.img} objectFit='cover' alt='' />
-                  </div>
-                  <div className="info">
-                    <p className='count'><CountUp end={item.end} duration={item.duration} />+</p>
-                    {
-                      active === i &&
-                      <>
-                        <p className='text'>{item.text}</p>
-                        {item.en && <p className='en'>{item.en}</p>}
-                      </>
-                    }
-                  </div>
-                </li>
-              ))
-            }
-          </ul>
+          <div className="container">
+            <ul className='blinds-list' onMouseLeave={onMouseLeave}>
+              {
+                data.map((item, i) => (
+                  <li
+                    className={classNames('blinds-item', { 'hover': index === i }, { 'active': active === i })}
+                    key={item.text}
+                    onMouseEnter={(e) => onMouseEnter(e, i)}
+                    onClick={(e) => handleClickItem(e, i)}
+                  >
+                    <div className='background'>
+                      <Image layout='fill' src={item.img} objectFit='cover' alt='' />
+                    </div>
+                    <div className="info">
+                      <p className='count'><CountUp end={item.end} duration={item.duration} />+</p>
+                      {
+                        active === i &&
+                        <>
+                          <p className='text'>{item.text}</p>
+                          {item.en && <p className='en'>{item.en}</p>}
+                        </>
+                      }
+                    </div>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </section>
+        <section className="schedule">
+          <div className="title">大会议程 meeting schedule</div>
+          <div className="container">
+            <Swiper className='schedule-list' slidesPerView={2} spaceBetween={20}>
+              <SwiperSlide className='schedule-item'>
+                <div className="date">12.15 am</div>
+                <div className="title">未来航电论坛</div>
+                <ol className='schedule-item-ol'>
+                  <li className='schedule-item-li'>大型客机对机载系统的应用与技术需求</li>
+                  <li className='schedule-item-li'>通航航电系统新机遇</li>
+                  <li className='schedule-item-li'>航空电子互连网络的顶层设计架构与验证方案</li>
+                  <li className='schedule-item-li'>航空运输业全球化对未来航电新的挑战机遇</li>
+                  <li className='schedule-item-li'>绿色航电安全、高效、智能、先进航电技术</li>
+                  <li className='schedule-item-li'>综合模块化航空电子系统（IMA）发展趋势</li>
+                  <li className='schedule-item-li'>分布式航电系统综合架构（DIMA）研究进展</li>
+                </ol>
+              </SwiperSlide>
+              <SwiperSlide className='schedule-item'>
+                <div className="date">12.15 am</div>
+                <div className="title">智能航空机载论坛</div>
+                <ol className='schedule-item-ol'>
+                  <li className='schedule-item-li'>机载MRO</li>
+                  <li className='schedule-item-li'>综合化航电系统在国产民航飞机的应用</li>
+                  <li className='schedule-item-li'>现代航空电子系统技术发展浅析</li>
+                  <li className='schedule-item-li'>民用航空机电产业格局分析</li>
+                  <li className='schedule-item-li'>综合化航电系统在国产民航飞机的应用</li>
+                  <li className='schedule-item-li'>现代航空电子系统技术发展浅析</li>
+                  <li className='schedule-item-li'>民用航空机电产业格局分析</li>
+                </ol>
+              </SwiperSlide>
+              <SwiperSlide className='schedule-item'>
+                <div className="date">12.16 am</div>
+                <div className="title">智能航空机载论坛</div>
+                <ol className='schedule-item-ol'>
+                  <li className='schedule-item-li'>综合航电技术在国产通用飞机上的应用研究</li>
+                  <li className='schedule-item-li'>机载智能电源管理系统</li>
+                  <li className='schedule-item-li'>航空电子适航标准</li>
+                  <li className='schedule-item-li'>民用飞机座舱显示与控制系统</li>
+                  <li className='schedule-item-li'>综合化航电系统在国产民航飞机的应用</li>
+                  <li className='schedule-item-li'>座舱显示管理系统</li>
+                  <li className='schedule-item-li'>航电系统MRO</li>
+                </ol>
+              </SwiperSlide>
+              <SwiperSlide className='schedule-item'>
+                <div className="date">12.16 am</div>
+                <div className="title"> 通用飞机驾驶舱创新论坛</div>
+                <ol className='schedule-item-ol'>
+                  <li className='schedule-item-li'>现代航空电子系统技术发展浅析</li>
+                  <li className='schedule-item-li'>航电系统实时仿真测试技术</li>
+                  <li className='schedule-item-li'>eVTOL自主飞行系统</li>
+                  <li className='schedule-item-li'>智能协同eVTOL的关键飞控技术</li>
+                  <li className='schedule-item-li'>航电系统实时仿真测试技术</li>
+                  <li className='schedule-item-li'>eVTOL自主飞行系统</li>
+                  <li className='schedule-item-li'>智能协同eVTOL的关键飞控技术</li>
+                </ol>
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </section>
         <footer className='beian'><a href="https://beian.miit.gov.cn" target='__bank'>沪ICP备2020025359号</a></footer>
       </main>

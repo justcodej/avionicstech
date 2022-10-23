@@ -1,5 +1,4 @@
 .main {
-  overflow: hidden;
   color: #f8f8f8;
   background-color: rgb(7 15 30);
 }
@@ -172,7 +171,7 @@
   letter-spacing: 4px;
 }
 
-.introduction, .blinds{
+.introduction, .blinds, .schedule{
   padding: 200px 0;
   background: linear-gradient(180deg, rgb(7 15 30) 70%, rgb(36 64 116) 100%);
 }
@@ -194,8 +193,8 @@
 }
 
 .introduction .container .info{
-  width: 600px;
-  margin-left: 40px;
+  width: 500px;
+  margin-left: 100px;
   line-height: 25px;
 }
 
@@ -214,10 +213,15 @@
   padding-right: 100px;
 }
 
-.blinds .title{
+.blinds .container{
+  min-width: 1400px;
+}
+
+.blinds>.title, .schedule>.title{
   color: #bcbfcf;
   font-size: 14px;
   margin-bottom: 100px;
+  text-transform: uppercase;
 }
 
 .blinds .blinds-list{
@@ -229,7 +233,6 @@
   position: relative;
   height: 600px;
   cursor: pointer;
-  user-select: none;
   transition: width .4s ease;
 }
 
@@ -308,4 +311,85 @@
   color: #bcbfcf;
   font-size: 14px;
   background-color: #171717;
+}
+
+.schedule{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.schedule .container{
+  margin: 0 auto;
+  min-width: 1400px;
+}
+
+.schedule .container .schedule-list{
+  padding-top: 180px;
+}
+
+.schedule .container .schedule-list::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+}
+
+.schedule .container .schedule-list .schedule-item{
+  position: relative;
+  padding: 40px 0 40px 80px;
+  background: linear-gradient(180deg, transparent 0%, rgb(7 15 30) 100%), url('/images/Slider1-Turbo-Engine-Solutions.jpg') no-repeat center / cover;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.schedule .container .schedule-list .schedule-item::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -180px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+
+.schedule .container .schedule-list .schedule-item:hover{
+}
+
+.schedule .container .schedule-list .schedule-item:hover::after{
+}
+
+.schedule .container .schedule-list .schedule-item .date, .schedule .container .schedule-list .schedule-item .title{
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.schedule .container .schedule-list .schedule-item .date{
+  position: absolute;
+  top: -140px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.schedule .container .schedule-list .schedule-item .title{
+  margin-bottom: 20px;
+}
+
+.schedule .container .schedule-list .schedule-item .schedule-item-li{
+  font-size: 14px;
+  color: #ccc;
+  line-height: 16px;
+  margin-bottom: 15px;
 }
