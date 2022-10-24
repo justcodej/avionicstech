@@ -271,11 +271,26 @@ export default function Home() {
             </Swiper>
           </div>
         </section>
-        <section>
-          <div className="titl">会议一览</div>
+        <section className='glance'>
+          <div className="title">会议一览</div>
+          <div className="container">
+            <ul>
+              <li>
+                <div className="title">战略会议</div>
+                <div className="text">为适应全球化民航低碳市场需求，零排放全电推进系统、储能与推进技术研究、智能简洁驾驶舱系统、飞行自动化技术、自主起降技术等推动航空电气化未来</div>
+              </li>
+              <li>
+                <div className="title">技术会议</div>
+                <div className="text">来自行业领先整机商及航电集成商研发企业，携手共进，深耕未来航电核心技术</div>
+              </li>
+            </ul>
+          </div>
         </section>
-        <section>
-          <div className="titl">会议内容</div>
+        <section className='meeting-content'>
+          <div className="title">会议内容</div>
+          <div className="container">
+            
+          </div>
         </section>
         <footer className='beian'><a href="https://beian.miit.gov.cn" target='__bank'>沪ICP备2020025359号</a></footer>
       </main>

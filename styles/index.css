@@ -163,14 +163,29 @@
   margin-bottom: 150px;
 }
 
-.introduction, .blinds, .schedule{
+.introduction, .blinds, .schedule, .glance, .meeting-content{
   padding: 140px 0 180px;
   background: linear-gradient(180deg, rgb(7 15 30) 70%, rgb(22 35 60) 100%);
 }
 
-.introduction .container{
-  width: 1400px;
+.glance .container,  .meeting-content .container, .schedule .container, .blinds .container{
+  min-width: 1400px;
   margin: 0 auto;
+}
+
+.blinds, .meeting-content, .glance, .schedule, .introduction{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.blinds>.title, .schedule>.title, .meeting-content>.title, .glance>.title{
+  color: #bcbfcf;
+  font-size: 14px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.introduction .container{
   display: flex;
   align-items: center;
 }
@@ -198,22 +213,6 @@
   font-size: 14px;
   margin-top: 30px;
   color: #ccc;
-}
-
-.blinds{
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.blinds .container{
-  min-width: 1400px;
-}
-
-.blinds>.title, .schedule>.title{
-  color: #bcbfcf;
-  font-size: 14px;
-  margin-bottom: 60px;
-  text-transform: uppercase;
 }
 
 .blinds .blinds-list{
@@ -306,14 +305,7 @@
 }
 
 .schedule{
-  padding-left: 100px;
-  padding-right: 100px;
   position: relative;
-}
-
-.schedule .container{
-  margin: 0 auto;
-  min-width: 1400px;
 }
 
 .schedule .container .schedule-list{
@@ -354,12 +346,6 @@
   border-color: transparent transparent transparent #fff;
 }
 
-.schedule .container .schedule-list .schedule-item:hover{
-}
-
-.schedule .container .schedule-list .schedule-item:hover::after{
-}
-
 .schedule .container .schedule-list .schedule-item .date, .schedule .container .schedule-list .schedule-item .title{
   font-size: 20px;
   line-height: 30px;
@@ -385,4 +371,7 @@
   color: #ccc;
   line-height: 16px;
   margin-bottom: 15px;
+}
+
+.meeting-content{
 }
