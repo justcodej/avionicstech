@@ -197,7 +197,7 @@ export default function Home() {
                       <Image layout='fill' src={item.img} objectFit='cover' alt='' />
                     </div>
                     <div className="info">
-                      <p className='count'><CountUp end={item.end} duration={item.duration} />+</p>
+                      <p className='count'><CountUp end={item.end} duration={item.duration} /> +</p>
                       {
                         active === i &&
                         <>
@@ -274,7 +274,7 @@ export default function Home() {
         <section className='glance'>
           <div className="title">会议一览</div>
           <div className="container">
-            <ul>
+            <ul className='glance-list'>
               <li>
                 <div className="title">战略会议</div>
                 <div className="text">为适应全球化民航低碳市场需求，零排放全电推进系统、储能与推进技术研究、智能简洁驾驶舱系统、飞行自动化技术、自主起降技术等推动航空电气化未来</div>
@@ -284,12 +284,50 @@ export default function Home() {
                 <div className="text">来自行业领先整机商及航电集成商研发企业，携手共进，深耕未来航电核心技术</div>
               </li>
             </ul>
+            <ul className='module-list'>
+              <li className='module-item'>智能机载系统</li>
+              <li className='module-item'>机电系统</li>
+              <li className='module-item'>驾驶舱系统</li>
+              <li className='module-item'>惯导系统</li>
+              <li className='module-item'>总线仿真与测试</li>
+              <li className='module-item'>航空电气化</li>
+              <li className='module-item'>电推进系统</li>
+              <li className='module-item'>自主起降</li>
+              <li className='module-item'>自主飞控</li>
+              <li className='module-item'>机载GPU处理器</li>
+            </ul>
           </div>
         </section>
         <section className='meeting-content'>
-          <div className="title">会议内容</div>
+          <div className="title">会议内容/演讲嘉宾</div>
           <div className="container">
-            
+            <div className='container-l'>
+              <p className='title'>“电能驱动、氢能驱动、混合动力、eVTOL等，全球能源结构正拥抱零碳时代。绿色航电、全新一代航电系统正在构建未来智能感知飞行系统。数据智能、决策辅助、智能预测、安全互联等新技术逐渐使用在航空飞行安全体系。</p>
+              <ul>
+                <li>10个参会原因，10 reasons to join Avionics Tech</li>
+                <li>行业会议引领者Industry Conference Leadership</li>
+                <li>学习领袖对未来的预研 Pre-research</li>
+                <li>上下游企业洽谈Upstream and downstream enterprises cooperative</li>
+                <li>获得知识见解 Valuable knowledge – Topics</li>
+                <li>寻找潜在合作伙伴One business platform</li>
+                <li>学习新产品和创新能力New technology new products</li>
+                <li>技术工程师专场会议 All the key technologies at one venue</li>
+                <li>更多机会 Unlimited opportunities</li>
+                <li>技术前沿 Leading R&D</li>
+                <li>支持未来航电发挥领先作用Support leading avionics technology systems</li>
+              </ul>
+            </div>
+            <div className='container-r'>
+              <p className='title'>会议同期有来自国内外航空行业协会、民机制造单位、航空电子系统集成商、高校/院所、企业等参与。</p>
+              <ul>
+                <li>您将会获得/遇见谁</li>
+                <li>两天有效的学习时间，领略未来新的发展趋势</li>
+                <li>航电行业未来之声</li>
+                <li>聚焦中国民航市场的动态、政策趋势、项目交付、产业发展，领变全球航电产业创新商业模式及智能机载5G技术前沿。</li>
+                <li>民航、通航、智能飞行Evtol等民航驾驶舱、航空机电全产业链大会</li>
+                <li>机载软件、硬件、适航、标准、市场需求等多方位阐述</li>
+              </ul>
+            </div>
           </div>
         </section>
         <footer className='beian'><a href="https://beian.miit.gov.cn" target='__bank'>沪ICP备2020025359号</a></footer>
