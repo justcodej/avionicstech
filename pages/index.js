@@ -61,6 +61,7 @@ export default function Home() {
   const [lenis, setLenis] = useState()
   const [index, setIndex] = useState()
   const [active, setActive] = useState()
+  const [isTransparentMenu, setIsTransparentMenu] = useState(true)
 
   const onMouseEnter = (e, index) => {
     e.stopPropagation()
@@ -99,12 +100,23 @@ export default function Home() {
     setIndex(-1)
     setActive(-1)
   }
+
+  const onScroll = () => {
+    let top = document.documentElement.scrollTop || window.pageYOfset ||document.body.scrollTop
+    if (top < 1000) {
+      setIsTransparentMenu(true)
+    } else {
+      setIsTransparentMenu(false)
+    }
+  }
   
   useEffect(() => {
     document.addEventListener('click', reset, false)
-    
+    document.addEventListener('scroll', onScroll, false)
+
     return () => {
       document.removeEventListener('click', reset)
+      document.removeEventListener('scroll', onScroll)
     }
   }, [])
 
@@ -121,17 +133,20 @@ export default function Home() {
       </Head>
 
       <main className='main'>
-        <nav className='menu'>
+        <nav className={classNames('menu', { 'transparent': isTransparentMenu })}>
           <div className='rest-text'>Avionicstech</div>
           <ul className='menu-list'>
-            <li className='menu-item'><a href="#首页">首页</a></li>
-            <li className='menu-item'><a href="#关于大会">关于大会</a></li>
-            <li className='menu-item'><a href="#会议一览">会议一览</a></li>
-            <li className='menu-item'><a href="#会议内容">会议内容</a></li>
-            <li className='menu-item'><a href="#合作单位">合作单位</a></li>
+            <li className='menu-item'><a href="#home">首页</a></li>
+            <li className='menu-item'><a href="#introduction">未来航电</a></li>
+            <li className='menu-item'><a href="#blinds">会议亮点</a></li>
+            <li className='menu-item'><a href="#schedule">大会议程</a></li>
+            <li className='menu-item'><a href="#glance">会议一览</a></li>
+            <li className='menu-item'><a href="#meeting-content">会议内容</a></li>
+            <li className='menu-item'><a href="#plan">展区平面图</a></li>
+            <li className='menu-item'><a href="#contact">联系我们</a></li>
           </ul>
         </nav>
-        <section className="banner">
+        <section className="banner" id='home'>
           <Swiper
             autoplay
             onSlideChange={() => console.log('slide change')}
@@ -172,7 +187,7 @@ export default function Home() {
             <p className='date'>2022年12月14-15日</p>
           </div>
         </section>
-        <section className='introduction'>
+        <section className='introduction' id='introduction'>
           <div className="container">
             <div className='img'></div>
             <div className="info">
@@ -181,7 +196,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className='blinds'>
+        <section className='blinds' id='blinds'>
           <div className="title">会议亮点 HIGHLIGHTS</div>
           <div className="container">
             <ul className='blinds-list' onMouseLeave={onMouseLeave}>
@@ -212,7 +227,7 @@ export default function Home() {
             </ul>
           </div>
         </section>
-        <section className="schedule">
+        <section className="schedule" id='schedule'>
           <div className="title">大会议程 meeting schedule</div>
           <div className="container">
             <Swiper className='schedule-list' slidesPerView={2} spaceBetween={20}>
@@ -271,7 +286,7 @@ export default function Home() {
             </Swiper>
           </div>
         </section>
-        <section className='glance'>
+        <section className='glance' id='glance'>
           <div className="title">会议一览</div>
           <div className="container">
             <ul className='glance-list'>
@@ -310,7 +325,7 @@ export default function Home() {
             </ul>
           </div>
         </section>
-        <section className='meeting-content'>
+        <section className='meeting-content' id='meeting-content'>
           <div className="title">会议内容/演讲嘉宾</div>
           <div className="container">
             <div className='container-l'>
@@ -342,13 +357,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className='plan'>
+        <section className='plan' id='plan'>
           <div className="title">展区平面图（展）</div>
           <div className="container">
             <Image layout='fill' alt='图片' src='/images/plan-image.png'></Image>
           </div>
         </section>
-        <section className='contact'>
+        <section className='contact' id='contact'>
           <div className="title">联系我们</div>
           <div className="container">
             <ul>

@@ -22,7 +22,12 @@
   top: 0;
   right: 0;
   z-index: 100;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.8);
+  transition: all .4s ease;
+}
+
+.main .menu.transparent{
+  background-color: transparent;
 }
 
 .main .menu-list{
