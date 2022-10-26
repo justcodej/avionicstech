@@ -101,6 +101,10 @@ export default function Home() {
     setActive(-1)
   }
 
+  const handleScrollView = (cls) => {
+    document.querySelector(`#${cls}`).scrollIntoView({ behavior: 'smooth' })
+  }
+
   const onScroll = () => {
     let top = document.documentElement.scrollTop || window.pageYOfset ||document.body.scrollTop
     if (top < 1000) {
@@ -136,14 +140,14 @@ export default function Home() {
         <nav className={classNames('menu', { 'transparent': isTransparentMenu })}>
           <div className='rest-text'>Avionicstech</div>
           <ul className='menu-list'>
-            <li className='menu-item'><a href="#home">首页</a></li>
-            <li className='menu-item'><a href="#introduction">未来航电</a></li>
-            <li className='menu-item'><a href="#blinds">会议亮点</a></li>
-            <li className='menu-item'><a href="#schedule">大会议程</a></li>
-            <li className='menu-item'><a href="#glance">会议一览</a></li>
-            <li className='menu-item'><a href="#meeting-content">会议内容</a></li>
-            <li className='menu-item'><a href="#plan">展区平面图</a></li>
-            <li className='menu-item'><a href="#contact">联系我们</a></li>
+            <li className='menu-item'><a href="javascript:;" onClick={() => handleScrollView('home')}>首页</a></li>
+            <li className='menu-item'><a href="javascript:;" onClick={() => handleScrollView('introduction')}>未来航电</a></li>
+            <li className='menu-item'><a href="javascript:;" onClick={() => handleScrollView('blinds')}>会议亮点</a></li>
+            <li className='menu-item'><a href="javascript:;" onClick={() => handleScrollView('schedule')}>大会议程</a></li>
+            <li className='menu-item'><a href="javascript:;" onClick={() => handleScrollView('glance')}>会议一览</a></li>
+            <li className='menu-item'><a href="javascript:;" onClick={() => handleScrollView('meeting-content')}>会议内容</a></li>
+            <li className='menu-item'><a href="javascript:;" onClick={() => handleScrollView('plan')}>展区平面图</a></li>
+            <li className='menu-item'><a href="javascript:;" onClick={() => handleScrollView('contact')}>联系我们</a></li>
           </ul>
         </nav>
         <section className="banner" id='home'>
