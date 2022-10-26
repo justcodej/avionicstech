@@ -22,6 +22,7 @@
   top: 0;
   right: 0;
   z-index: 100;
+  background-color: rgba(0,0,0,.5);
 }
 
 .main .menu-list{
@@ -166,22 +167,22 @@
   margin-bottom: 150px;
 }
 
-.introduction, .blinds, .schedule, .glance, .meeting-content{
+.introduction, .blinds, .schedule, .glance, .meeting-content, .plan, .contact{
   padding: 140px 0 180px;
   background: linear-gradient(180deg, rgb(7 15 30) 70%, #111827 100%);
 }
 
-.glance .container,  .meeting-content .container, .schedule .container, .blinds .container{
+.glance .container, .meeting-content .container .container, .schedule .container, .blinds .container{
   min-width: 1400px;
   margin: 0 auto;
 }
 
-.blinds, .meeting-content, .glance, .schedule, .introduction{
+.blinds, .meeting-content, .glance, .schedule, .introduction, .plan, .contact{
   padding-left: 100px;
   padding-right: 100px;
 }
 
-.blinds>.title, .schedule>.title, .meeting-content>.title, .glance>.title{
+.blinds>.title, .schedule>.title, .meeting-content>.title, .glance>.title, .plan>.title, .contact>.title{
   color: #bcbfcf;
   font-size: 14px;
   margin-bottom: 60px;
@@ -374,7 +375,7 @@
 }
 
 .schedule .container .schedule-list .schedule-item:hover{
-  border: 2px solid #bcbfcf;
+  border: 2px solid #004ac2;
 }
 
 .schedule .container .schedule-list .schedule-item:hover .title{
@@ -393,7 +394,7 @@
 }
 
 .glance .glance-list li{
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .glance .glance-list li .title{
@@ -416,7 +417,7 @@
 .glance .module-list .module-item{
   width: calc((100% / 5) - 16px);
   aspect-ratio: 16/9;
-  background-color: #111827;
+  background: linear-gradient(180deg, transparent 0%, #111827 100%);
   margin-bottom: 20px;
   margin-right: 20px;
   text-align: center;
@@ -434,7 +435,7 @@
 .glance .module-list .module-item:hover{
   transform: translateY(-8px);
   color: #bcbfcf;
-  border: 2px solid #bcbfcf;
+  border: 2px solid #004ac2;
 }
 
 .glance .module-list .module-item:nth-child(5n){
@@ -450,7 +451,7 @@
   padding: 40px 80px;
   box-sizing: border-box;
   transition: all .4s ease;
-  background-color: #111827;
+  background: linear-gradient(180deg, transparent 0%, #111827 100%);
   cursor: pointer;
   border: 2px solid transparent;
   width: calc((100% /2) - 20px);
@@ -469,7 +470,7 @@
 }
 
 .meeting-content .container>div:hover{
-  border: 2px solid #bcbfcf;
+  border: 2px solid #004ac2;
 }
 
 .meeting-content .container .title{
@@ -489,4 +490,38 @@
 
 .meeting-content .container ul li{
   line-height: 20px;
+}
+
+.plan{
+  background: #f0f0f0;
+}
+
+.plan .container{
+  height: 660px;
+  width: 1083px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.plan .title{
+  color: #111827;
+}
+
+.contact .container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact .container>ul{
+  margin-right: 80px;
+}
+
+.contact .container>ul li{
+  margin-bottom: 10px;
+}
+
+.contact .container>ul li.contact-title{
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 15px;
 }

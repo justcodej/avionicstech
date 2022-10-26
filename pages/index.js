@@ -283,6 +283,18 @@ export default function Home() {
                 <div className="title">技术会议</div>
                 <div className="text">来自行业领先整机商及航电集成商研发企业，携手共进，深耕未来航电核心技术</div>
               </li>
+              <li>
+                <div className="title">参会国家</div>
+                <div className="text">中国 德国 法国 中东 亚太 美国</div>
+              </li>
+              <li>
+                <div className="title">参会企业</div>
+                <div className="text">飞机制造 机载系统 电机系统 只能驾驶舱 集成商领先企业 院所高校 软件开发 航空电子加工</div>
+              </li>
+              <li>
+                <div className="title">参会来自</div>
+                <div className="text">55% 技术研发 45% 市场需求</div>
+              </li>
             </ul>
             <ul className='module-list'>
               <li className='module-item'>智能机载系统</li>
@@ -304,17 +316,17 @@ export default function Home() {
             <div className='container-l'>
               <p className='title'>“电能驱动、氢能驱动、混合动力、eVTOL等，全球能源结构正拥抱零碳时代。绿色航电、全新一代航电系统正在构建未来智能感知飞行系统。数据智能、决策辅助、智能预测、安全互联等新技术逐渐使用在航空飞行安全体系。</p>
               <ul>
-                <li>10个参会原因，10 reasons to join Avionics Tech</li>
-                <li>行业会议引领者Industry Conference Leadership</li>
-                <li>学习领袖对未来的预研 Pre-research</li>
-                <li>上下游企业洽谈Upstream and downstream enterprises cooperative</li>
-                <li>获得知识见解 Valuable knowledge – Topics</li>
-                <li>寻找潜在合作伙伴One business platform</li>
-                <li>学习新产品和创新能力New technology new products</li>
-                <li>技术工程师专场会议 All the key technologies at one venue</li>
-                <li>更多机会 Unlimited opportunities</li>
-                <li>技术前沿 Leading R&D</li>
-                <li>支持未来航电发挥领先作用Support leading avionics technology systems</li>
+                <li>10个参会原因</li>
+                <li>行业会议引领者</li>
+                <li>学习领袖对未来的预研</li>
+                <li>上下游企业洽谈</li>
+                <li>获得知识见解</li>
+                <li>寻找潜在合作伙伴</li>
+                <li>学习新产品和创新能力</li>
+                <li>技术工程师专场会议</li>
+                <li>更多机会</li>
+                <li>技术前沿</li>
+                <li>支持未来航电发挥领先作用</li>
               </ul>
             </div>
             <div className='container-r'>
@@ -328,6 +340,31 @@ export default function Home() {
                 <li>机载软件、硬件、适航、标准、市场需求等多方位阐述</li>
               </ul>
             </div>
+          </div>
+        </section>
+        <section className='plan'>
+          <div className="title">展区平面图（展）</div>
+          <div className="container">
+            <Image layout='fill' alt='图片' src='/images/plan-image.png'></Image>
+          </div>
+        </section>
+        <section className='contact'>
+          <div className="title">联系我们</div>
+          <div className="container">
+            <ul>
+              <li className='contact-title'>演讲及合作机会</li>
+              <li>Eason Li</li>
+              <li>T:+86 21 5001 7089</li>
+              <li>M:+86 186 1622 0521</li>
+              <li>E:Eason.li@speyevents.cn</li>
+            </ul>
+            <ul>
+              <li className='contact-title'>参会及展示机会</li>
+              <li>Aaron Lin</li>
+              <li>T:+86 21 5001 7089</li>
+              <li>M:+86 </li>
+              <li>E:Aaron@speyevents.cn </li>
+            </ul>
           </div>
         </section>
         <footer className='beian'><a href="https://beian.miit.gov.cn" target='__bank'>沪ICP备2020025359号</a></footer>
