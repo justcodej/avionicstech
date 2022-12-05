@@ -316,7 +316,10 @@ export default function Home() {
               </li>
             </ul>
             <ul className='module-list'>
-              <li className='module-item'>智能机载系统</li>
+              <li className='module-item'>
+                <i className="iconfont icon-wuguan"></i>
+                智能机载系统
+              </li>
               <li className='module-item'>机电系统</li>
               <li className='module-item'>驾驶舱系统</li>
               <li className='module-item'>惯导系统</li>
